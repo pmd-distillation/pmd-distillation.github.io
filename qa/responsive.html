@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PMD — Responsive review</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #eaeaea; color: #111; font: 12px/1.5 system-ui, sans-serif; }
+      header { display: flex; align-items: center; gap: 24px; min-height: 56px; padding: 12px 24px; background: #fff; position: sticky; top: 0; z-index: 2; }
+      label { display: flex; align-items: center; gap: 10px; }
+      select { font: inherit; padding: 5px; background: #fff; border: 1px solid #eaeaea; border-radius: 4px; }
+      main { padding: 24px; width: max-content; min-width: 100%; display: flex; justify-content: center; }
+      iframe { display: block; flex-shrink: 0; border: 0; background: #fff; height: calc(100vh - 104px); }
+      a { margin-left: auto; color: #666; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong>PMD / Responsive review</strong>
+      <label>Viewport <select id="viewport"><option value="1440">Desktop · 1440 px</option><option value="768">Tablet · 768 px</option><option value="390">Mobile · 390 px</option><option value="320">Small mobile · 320 px</option></select></label>
+      <a href="/">Open website</a>
+    </header>
+    <main><iframe id="preview" title="PMD responsive website preview" src="/" width="1440"></iframe></main>
+    <script>
+      const selector = document.getElementById('viewport');
+      const frame = document.getElementById('preview');
+      selector.addEventListener('change', () => { frame.width = selector.value; });
+    </script>
+  </body>
+</html>
