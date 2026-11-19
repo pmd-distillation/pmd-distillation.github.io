@@ -17,14 +17,14 @@ export const prompts: readonly Prompt[] = [
     full: 'a cat in the house',
   },
   {
-    id: '02',
-    summary: 'a dog in the park',
-    full: 'a dog in the park',
-  },
-  {
     id: '04',
     summary: 'A cloaked traveler on a snowy mountain pass.',
     full: 'Cinematic close-up portrait of a cloaked traveler standing on a mountain pass, snow swirling in the air, distant peaks behind her, wind-tousled hair, cold blue tones, quiet sense of endurance and journey',
+  },
+  {
+    id: '02',
+    summary: 'a dog in the park',
+    full: 'a dog in the park',
   },
   {
     id: '05',

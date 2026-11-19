@@ -123,7 +123,7 @@ a.resource-button:hover { background: var(--color-placeholder); border-color: va
 .prompt-copy { display: flex; align-items: baseline; gap: 12px; padding-top: 5px; font-size: var(--text-ui); line-height: 1.7; }
 .prompt-label { flex: 0 0 auto; font-weight: 500; }
 .prompt-dash { color: var(--color-icon); }
-.prompt-copy p { color: var(--color-secondary); max-width: 780px; }
+.prompt-copy p { color: var(--color-secondary); max-width: none; }
 .expand-prompt { display: grid; place-items: center; min-width: 32px; height: 32px; margin-top: -1px; border-radius: 50%; color: var(--color-secondary); transition: color var(--duration), background var(--duration); }
 .expand-prompt svg { width: 16px; height: 16px; transition: transform var(--duration); }
 .expand-prompt[aria-expanded='true'] svg { transform: rotate(45deg); }
@@ -320,4 +320,3 @@ details[open] .citation-toggle { transform: rotate(45deg); }
 
 
 /* Video prompts are full generation prompts: let them use the whole row width. */
-.video-comparison .prompt-copy p { max-width: none; }

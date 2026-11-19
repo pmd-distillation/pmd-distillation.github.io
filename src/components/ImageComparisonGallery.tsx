@@ -4,7 +4,7 @@ import { prompts } from '../data/prompts';
 import { formatIndex, nextPromptIndex } from '../data/gallery';
 import { defaultFamily, families } from '../data/families';
 import type { FamilyCompetitor, FamilyId } from '../data/families';
-import { ArrowIcon, PlusIcon } from './Icons';
+import { ArrowIcon } from './Icons';
 import { CompetitorTabs } from './CompetitorTabs';
 import { FamilySwitch } from './FamilySwitch';
 import { ImageComparisonBatch } from './ImageComparisonBatch';
@@ -17,7 +17,6 @@ export function ImageComparisonGallery() {
   const [familyId, setFamilyId] = useState<FamilyId>(defaultFamily.id);
   const family = families.find(item => item.id === familyId) ?? defaultFamily;
   const [competitor, setCompetitor] = useState<FamilyCompetitor>(defaultFamily.defaultCompetitor);
-  const [expanded, setExpanded] = useState(false);
   const [activeSample, setActiveSample] = useState(0);
   const [batchIndex, setBatchIndex] = useState(0);
   const [batchDirection, setBatchDirection] = useState<-1 | 1>(1);
@@ -26,7 +25,6 @@ export function ImageComparisonGallery() {
   const outgoingScrollLeft = useRef(0);
   const gallery = useRef<HTMLDivElement>(null);
   const prompt = { ...prompts[promptIndex], ...family.promptText?.[prompts[promptIndex].id] };
-  const expandable = prompt.full !== prompt.summary;
   const samples = family.samples;
   const batchCount = Math.max(1, Math.floor(family.sampleCount(prompt.id, competitor.id) / samples.length));
   const offset = batchIndex * samples.length;
@@ -94,7 +92,6 @@ export function ImageComparisonGallery() {
 
   function navigate(direction: -1 | 1) {
     setPromptIndex(index => nextPromptIndex(index, direction, prompts.length));
-    setExpanded(false);
     resetImages();
   }
 
@@ -150,8 +147,7 @@ export function ImageComparisonGallery() {
           className="batch-navigation-mobile" onNavigate={changeImageBatch} disabled={outgoingBatch !== null} />}
       </div>
       <div className="comparison-prompt">
-        <div className="prompt-copy" id="comparison-prompt"><span className="prompt-label">Prompt {formatIndex(promptIndex + 1)}</span><span className="prompt-dash" aria-hidden="true">—</span><p>{expanded ? prompt.full : prompt.summary}</p></div>
-        {expandable && <button type="button" className="expand-prompt" aria-controls="comparison-prompt" aria-expanded={expanded} aria-label={expanded ? 'Collapse prompt' : 'Expand full prompt'} onClick={() => setExpanded(value => !value)}><PlusIcon /></button>}
+        <div className="prompt-copy" id="comparison-prompt"><span className="prompt-label">Prompt {formatIndex(promptIndex + 1)}</span><span className="prompt-dash" aria-hidden="true">—</span><p>{prompt.full}</p></div>
       </div>
       <div className="comparison-footer">
         <span className="placeholder-note">{availability}</span>
