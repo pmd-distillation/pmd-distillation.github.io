@@ -66,10 +66,10 @@ const sdxlPmdFiles: Partial<Record<string, readonly string[]>> = {
   // Dog: RAW iteration 1750 seed 57, then RAW iteration 1050 seeds 51/52/57 (prompt_01_seed_* in the same run).
   '02': ['iter1750_seed57', 'iter1050_seed51', 'iter1050_seed52', 'iter1050_seed57'],
   // Tokyo ('A pretty Asian girl in Tokyo'): checkpoint 5000 of the SDXL CGF-GAN directional run, three batches of
-  // four picked from seeds 76-100.
+  // four picked from seeds 51-100.
   '03': ['asian_ckpt5000_seed94', 'asian_ckpt5000_seed84', 'asian_ckpt5000_seed95', 'asian_ckpt5000_seed89',
-         'asian_ckpt5000_seed87', 'asian_ckpt5000_seed99', 'asian_ckpt5000_seed97', 'asian_ckpt5000_seed79',
-         'asian_ckpt5000_seed80', 'asian_ckpt5000_seed76', 'asian_ckpt5000_seed77', 'asian_ckpt5000_seed78'],
+         'asian_ckpt5000_seed87', 'asian_ckpt5000_seed99', 'asian_ckpt5000_seed97', 'asian_ckpt5000_seed70',
+         'asian_ckpt5000_seed80', 'asian_ckpt5000_seed59', 'asian_ckpt5000_seed77', 'asian_ckpt5000_seed78'],
   // Traveler: same checkpoint 5000, three batches of four.
   '04': ['ckpt5000_seed55', 'ckpt5000_seed63', 'ckpt5000_seed67', 'ckpt5000_seed71',
          'ckpt5000_seed51', 'ckpt5000_seed54', 'ckpt5000_seed61', 'ckpt5000_seed62',
