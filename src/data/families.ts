@@ -65,10 +65,11 @@ const sdxlPmdFiles: Partial<Record<string, readonly string[]>> = {
   '01': ['iter825_seed51', 'iter825_seed52', 'iter825_seed53', 'iter825_seed57'],
   // Dog: RAW iteration 1750 seed 57, then RAW iteration 1050 seeds 51/52/57 (prompt_01_seed_* in the same run).
   '02': ['iter1750_seed57', 'iter1050_seed51', 'iter1050_seed52', 'iter1050_seed57'],
-  // Tokyo: checkpoint 5000 of the SDXL CGF-GAN directional run, three batches of four picked from seeds 51-75.
-  '03': ['ckpt5000_seed52', 'ckpt5000_seed55', 'ckpt5000_seed60', 'ckpt5000_seed70',
-         'ckpt5000_seed51', 'ckpt5000_seed53', 'ckpt5000_seed54', 'ckpt5000_seed59',
-         'ckpt5000_seed61', 'ckpt5000_seed63', 'ckpt5000_seed66', 'ckpt5000_seed67'],
+  // Tokyo ('A pretty Asian girl in Tokyo'): checkpoint 5000 of the SDXL CGF-GAN directional run, three batches of
+  // four picked from seeds 76-100.
+  '03': ['asian_ckpt5000_seed94', 'asian_ckpt5000_seed84', 'asian_ckpt5000_seed95', 'asian_ckpt5000_seed89',
+         'asian_ckpt5000_seed87', 'asian_ckpt5000_seed99', 'asian_ckpt5000_seed97', 'asian_ckpt5000_seed79',
+         'asian_ckpt5000_seed80', 'asian_ckpt5000_seed76', 'asian_ckpt5000_seed77', 'asian_ckpt5000_seed78'],
   // Traveler: same checkpoint 5000, three batches of four.
   '04': ['ckpt5000_seed55', 'ckpt5000_seed63', 'ckpt5000_seed67', 'ckpt5000_seed71',
          'ckpt5000_seed51', 'ckpt5000_seed54', 'ckpt5000_seed61', 'ckpt5000_seed62',
@@ -105,6 +106,11 @@ const sdxl: ModelFamily = {
   samples: [1, 2, 3, 4],
   // SDXL models rarely drew the robin's hat, so the SDXL robin images use a prompt without one.
   promptText: {
+    // SDXL Tokyo uses 'A pretty Asian girl in Tokyo' for every model.
+    '03': {
+      summary: 'A pretty Asian girl in Tokyo.',
+      full: 'A pretty Asian girl in Tokyo',
+    },
     '05': {
       summary: 'A robin on a bare branch.',
       full: 'A small robin perched on a bare branch on a quiet day.',
