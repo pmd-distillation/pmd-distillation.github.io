@@ -26,6 +26,10 @@ export function ArrowUpRightIcon(props: IconProps) {
 export function PaperIcon(props: IconProps) {
   return <svg {...defaults} {...props}><path d="M6 3.5h8l4 4v13H6zM14 3.5v4h4M9 12h6M9 16h6" /></svg>;
 }
+// Line-drawn hugging face (Hugging Face Daily Papers): round face, eyes, smile, and two hands hugging the chin.
+export function HuggingFaceIcon(props: IconProps) {
+  return <svg {...defaults} {...props}><circle cx="12" cy="10.5" r="7" /><path d="M9.4 8.9v.01M14.6 8.9v.01" strokeWidth={2.2} /><path d="M9.6 12.2c1.3 1.3 3.5 1.3 4.8 0" /><path d="M3.6 14.2c1.1 2.6 3.2 4.1 5.6 4.4M20.4 14.2c-1.1 2.6-3.2 4.1-5.6 4.4" /></svg>;
+}
 export function CodeIcon(props: IconProps) {
   return <svg {...defaults} {...props}><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-12-2 14" /></svg>;
 }

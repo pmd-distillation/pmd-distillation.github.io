@@ -1,4 +1,8 @@
-export const resources: { paper?: string; code?: string } = { paper: 'https://arxiv.org/pdf/2611.26629' };
+export const resources: { paper?: string; dailyPapers?: string; code?: string } = {
+  paper: 'https://arxiv.org/pdf/2611.26629',
+  dailyPapers: 'https://huggingface.co/papers/2611.26629',
+  code: 'https://github.com/yesiltepe-hidir/PMD',
+};
 
 export const affiliations = [
   { id: 1, name: 'Virginia Tech' },
