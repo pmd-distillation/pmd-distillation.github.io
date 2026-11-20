@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 // import { FeaturedImageMosaic } from './components/FeaturedImageMosaic';
@@ -10,7 +9,6 @@ import { Citation } from './components/Citation';
 import { Footer } from './components/Footer';
 
 export function App() {
-  const [citationOpen, setCitationOpen] = useState(false);
   return (
     <>
       <a className="skip-link" href="#gallery">Skip to image comparisons</a>
@@ -18,14 +16,14 @@ export function App() {
       <Header />
       <main>
         <div className="project-intro">
-          <Hero onCitationOpen={() => setCitationOpen(true)} />
+          <Hero />
           {/* <FeaturedImageMosaic /> */}
           {/* <TeaserVideo /> */}
           <MethodSection intro />
         </div>
         <ImageComparisonGallery />
         <VideoComparisonGallery />
-        <Citation open={citationOpen} onOpenChange={setCitationOpen} />
+        <Citation />
       </main>
       <Footer />
     </>

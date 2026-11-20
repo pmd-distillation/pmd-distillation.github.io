@@ -1,7 +1,7 @@
 import { affiliations, authors, resources } from '../data/paper';
 import { ArrowUpRightIcon, CodeIcon, HuggingFaceIcon, PaperIcon } from './Icons';
 
-export function Hero({ onCitationOpen }: { onCitationOpen: () => void }) {
+export function Hero() {
   return (
     <section className="hero container" aria-labelledby="paper-title">
       <div className="hero-heading">
@@ -28,7 +28,7 @@ export function Hero({ onCitationOpen }: { onCitationOpen: () => void }) {
           {resources.dailyPapers && <a className="resource-button" href={resources.dailyPapers} target="_blank" rel="noopener noreferrer"><HuggingFaceIcon />Daily Papers<span className="sr-only"> on Hugging Face</span></a>}
           {resources.code ? <a className="resource-button" href={resources.code} target="_blank" rel="noopener noreferrer"><CodeIcon />Code</a> :
             <button className="resource-button" type="button" disabled title="Code link forthcoming"><CodeIcon />Code<span className="sr-only"> — forthcoming</span></button>}
-          <a className="resource-button" href="#paper" onClick={onCitationOpen}>BibTeX<ArrowUpRightIcon /></a>
+          <a className="resource-button" href="#paper">BibTeX<ArrowUpRightIcon /></a>
         </div>
       </div>
     </section>

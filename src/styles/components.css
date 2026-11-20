@@ -146,17 +146,14 @@ a.resource-button:hover { background: var(--color-placeholder); border-color: va
 
 
 .citation-section { margin-top: 64px; border-top: 1px solid var(--color-line); }
-.citation-section summary { display: flex; align-items: center; justify-content: space-between; min-height: 75px; list-style: none; cursor: pointer; font-size: var(--text-body); }
-.citation-section summary::-webkit-details-marker { display: none; }
+.citation-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 75px; }
+.citation-header h2 { margin: 0; font: inherit; font-size: var(--text-body); font-weight: inherit; }
 .citation-format { margin-left: 18px; color: var(--color-secondary); font-size: var(--text-meta); }
-.citation-toggle { width: 18px; height: 18px; transition: transform var(--duration); }
-details[open] .citation-toggle { transform: rotate(45deg); }
 .citation-content { padding: 0 0 26px; }
-.citation-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; color: var(--color-secondary); font-size: var(--text-meta); }
 .copy-button { display: inline-flex; align-items: center; gap: 8px; padding: 8px 0 8px 8px; color: var(--color-ink); font-size: var(--text-meta); }
 .copy-button svg { width: 14px; height: 14px; }
 .copy-button:hover { color: var(--color-secondary); }
-.citation-content pre { margin: 14px 0 0; font: 11px/1.9 var(--font-mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.citation-content pre { margin: 0; font: 11px/1.9 var(--font-mono); white-space: pre-wrap; overflow-wrap: anywhere; }
 .copy-status { display: block; color: var(--color-secondary); font-size: var(--text-meta); }
 .copy-status:not(:empty) { margin-top: 12px; }
 .site-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 96px; padding-block: 24px 36px; border-top: 1px solid var(--color-line); color: var(--color-secondary); font-size: var(--text-meta); }
@@ -285,11 +282,10 @@ details[open] .citation-toggle { transform: rotate(45deg); }
   .page-count { min-width: 49px; font-size: 10px; }
   .page-count > span { margin-left: 2px; }
   .citation-section { margin-top: 43px; }
-  .citation-section summary { min-height: 68px; font-size: 12px; }
+  .citation-header { min-height: 68px; }
+  .citation-header h2 { font-size: 12px; }
   .citation-format { font-size: 10px; margin-left: 14px; }
-  .citation-toolbar { font-size: 10px; align-items: start; }
-  .citation-toolbar > span { max-width: 170px; }
-  .copy-button { font-size: 10px; padding-top: 0; white-space: nowrap; }
+  .copy-button { font-size: 10px; white-space: nowrap; }
   .citation-content pre { font-size: 9px; line-height: 1.9; }
   .site-footer { font-size: 9px; min-height: 88px; padding-block: 21px 30px; gap: 14px; align-items: start; }
   .site-footer > span { max-width: 205px; }
