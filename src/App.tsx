@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 // import { FeaturedImageMosaic } from './components/FeaturedImageMosaic';
-import { TeaserVideo } from './components/TeaserVideo';
+// import { TeaserVideo } from './components/TeaserVideo';
 import { ImageComparisonGallery } from './components/ImageComparisonGallery';
 import { VideoComparisonGallery } from './components/VideoComparisonGallery';
+import { MethodSection } from './components/MethodSection';
 import { Citation } from './components/Citation';
 import { Footer } from './components/Footer';
 
@@ -19,7 +20,8 @@ export function App() {
         <div className="project-intro">
           <Hero onCitationOpen={() => setCitationOpen(true)} />
           {/* <FeaturedImageMosaic /> */}
-          <TeaserVideo />
+          {/* <TeaserVideo /> */}
+          <MethodSection intro />
         </div>
         <ImageComparisonGallery />
         <VideoComparisonGallery />
