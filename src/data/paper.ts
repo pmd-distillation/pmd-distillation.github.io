@@ -16,12 +16,9 @@ export const authors = [
   { name: 'Pinar Yanardag', affiliation: 1, url: 'http://pinguar.org/' },
 ] as const;
 
-export const citation = `@misc{yesiltepe2026posteriormatchingdistillation,
-      title={Posterior Matching Distillation},
-      author={Hidir Yesiltepe and Julius Berner and Arash Vahdat and Pinar Yanardag},
-      year={2026},
-      eprint={2611.26629},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2611.26629},
+export const citation = `@article{yesiltepe2026posterior,
+  title={Posterior Matching Distillation},
+  author={Yesiltepe, Hidir and Berner, Julius and Vahdat, Arash and Yanardag, Pinar},
+  journal={arXiv preprint arXiv:2611.26629},
+  year={2026}
 }`;
